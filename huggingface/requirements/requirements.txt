@@ -1,0 +1,14 @@
+#Basic packages that I use a lot.....
+boto3==1.17.54
+boto==2.49.0
+botocore==1.20.54
+beautifulsoup4==4.7.1
+python-dotenv==0.18.0
+numpy==1.20.2
+pandas==1.2.4
+papermill==2.3.3
+ipykernel==5.5.5
+requests==2.25.1
+uuid==1.30 
+sqlalchemy==1.4.19
+

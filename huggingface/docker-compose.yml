@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+    notebook:
+      image: huggingfaceenvironment:notebook
+      container_name: huggingfaceEnvironment
+      build: 
+        context: .
+        dockerfile: huggingfaceEnvironment/Dockerfile
+        args:
+            NOTEBOOK_PASSWORD: "${NOTEBOOK_PASSWORD}"
+      ports:
+        - "8888:8888"
+      tty: true
+      stdin_open: true
+      volumes:
+        - ./notebooks:/home/jovyan/notebooks
+      command: bash -c "jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root -e JUPYTER_ENABLE_LAB=yes"
+  
